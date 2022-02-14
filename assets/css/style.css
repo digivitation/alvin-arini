@@ -482,6 +482,56 @@ section {
   font-family: "Snell Roundhand", sans-serif;
 }
 
+@media (max-width: 992px) {
+  /* #hero {
+    text-align: center;
+  }
+  #hero h1 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  #hero p {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  #hero .desc {
+    font-size: 12px;
+  } */
+  .facts .count-box {
+    padding: 30px 30px 25px 30px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    /* border-radius: 1.5%; */
+    margin-top: 30px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    background: #fff;
+  }
+
+  .facts .count-box h2 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Snell Roundhand", sans-serif;
+  }
+
+  .facts .count-box h1 {
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+  .facts .count-box h5 {
+    margin: 0;
+    font-size: 14px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Akills
 --------------------------------------------------------------*/
