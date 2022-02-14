@@ -8132,12 +8132,6 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-body {
-  font-family: "Poppins", Arial, sans-serif;
-  font-size: 15px;
-  line-height: 1.8;
-  font-weight: normal; }
-
 a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
@@ -8218,8 +8212,7 @@ h1, h2, h3, h4, h5,
           border-color: #fff; }
   .owl-carousel.home-slider {
     position: relative;
-    height: 650px;
-    z-index: 0; }
+    height: 650px;}
     .owl-carousel.home-slider .slider-item {
       background-size: cover;
       background-repeat: no-repeat;
@@ -8237,7 +8230,7 @@ h1, h2, h3, h4, h5,
         left: 0;
         right: 0;
         background: #000;
-        opacity: .3; }
+        opacity: .5; }
       .owl-carousel.home-slider .slider-item .slider-text {
         height: 650px;
         position: relative; }
