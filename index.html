@@ -31,7 +31,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/stars.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
   <!-- =======================================================
   * Template Name: MyResume - v4.7.0
@@ -42,6 +42,31 @@
 </head>
 
 <body>
+ <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Launch static backdrop modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content modal-background">
+      <div class="modal-body row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+        <div class="row text-center">
+          <div class="col-lg-12">
+            <h1>Alvin & Arini</h1>
+            <p>Kepada Bapak/Ibu/Saudara/i</p>
+            <strong>Nama Tamu</strong>
+          </div>
+          <div class="col-lg-12 mt-5">
+            <button type="button" class="btn btn-warning btn-small" data-bs-dismiss="modal"><i class="bi bi-envelope"></i> Buka Undangan</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- ======= Mobile nav toggle button ======= -->
   <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
@@ -756,6 +781,12 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    let myModal = new bootstrap.Modal(document.getElementById("staticBackdrop"), {});
+    document.onreadystatechange = function () {
+      myModal.show();
+    };
+  </script>
 
 </body>
 
