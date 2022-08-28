@@ -781,11 +781,18 @@
 
   <!--- Script for the REST API -->
 <script>
-  const baseUrl = "https://dev-invitation.herokuapp.com/api/invitation/"
+  const baseUrls = {
+    'local': 'http://localhost:8080/api/invitation/',
+    'dev': 'https://dev-invitation.herokuapp.com/api/invitation/',
+    'prod': 'https://be-wedding.piinalpin.com/api/invitation/'
+  };
+
+  const ENV = 'dev';
+  const url = baseUrls[ENV];
     const referenceNumber = new URLSearchParams(window.location.search).get("ref")
     console.log("referenceNumber: ", referenceNumber)
     const response = fetch(
-      baseUrl + referenceNumber,
+      url + referenceNumber,
       {
         method: "GET",
         headers: {
@@ -798,14 +805,15 @@
         return null
       }
       return json.data
-    }));
+    })).catch(error => {
+      return null;
+    });
 
   window.onload = async () => {
     const data = await response;
     let coupleName = "Alvin & Arini";
     let guestName = "Maaf undangan tidak tersedia.";
     if (data != null) {
-      console.log(data);
       coupleName = data.couple_name;
       guestName = data.guest_name;
     }
