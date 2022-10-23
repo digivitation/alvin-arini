@@ -69,7 +69,7 @@ aAdd audio
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #0563bb;
+  background: #b89068;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -81,7 +81,7 @@ aAdd audio
   line-height: 0;
 }
 .btn-audio:hover {
-  background: #0678e3;
+  background: #c5a280;
   color: #fff;
 }
 .btn-audio.active {
@@ -141,6 +141,10 @@ aAdd audio
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
+  }
+
+  .kasih-spasi {
+    margin-top: 1rem !important;
   }
 }
 /*--------------------------------------------------------------
@@ -597,7 +601,7 @@ section {
 }
 
 .skills .count-box {
-  padding: 30px 30px 25px 30px;
+  /* padding: 30px 30px 25px 30px; */
   margin-top: 30px;
   width: 100%;
   position: relative;
@@ -1268,4 +1272,136 @@ section {
     font-size: 20px;
     color: #ffffff !important;
   }
+
+  .icon-cover-image {
+    max-width: 150px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+  }
+}
+
+.icon-cover-image {
+  max-width: 200px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+@media screen and (max-width: 480px) {
+  .icon-cover-image {
+    max-width: 150px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+  }
+
+  .modal-background h1 {
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  .modal-background p {
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .modal-background strong {
+    font-size: 14px;
+    color: #ffffff !important;
+  }
+
+  .kasih-spasi {
+    margin-top: 1rem !important;
+  }
+  
+}
+
+.pulse {
+  background-color: #b89068;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 30px;
+  font-size: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+  animation: pulse 2s infinite;
+}
+.pulse:hover {
+  background-color: #c5a280;
+  color: #ffffff;
+  box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+  animation: pulse 2s linear infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+
+.foto-pasangan {
+  max-width: 300px;
+  border-bottom-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+  border-top-left-radius: 500px;
+  border-top-right-radius: 500px;
+  border: #b89068;
+  border-width: 10px 10px 15px 10px;
+  border-style: solid;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+.nama-pasangan {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.nama-lengkap-pasangan {
+  font-size: 20px;
+}
+
+.nama-orang-tua {
+  font-size: 14px;
+}
+
+.btn-instagram {
+  background-color: #b89068;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
+  color: white;
 }
