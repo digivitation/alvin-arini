@@ -389,7 +389,7 @@ section {
   display: block;
   width: 40px;
   height: 3px;
-  background: #0563bb;
+  background: darkslategray;
   bottom: 0;
   left: calc(50% - 20px);
 }
@@ -468,7 +468,7 @@ section {
 # Facts
 --------------------------------------------------------------*/
 .facts {
-  background: #D0BEAC !important;
+  background: #fff !important;
 }
 .facts .count-box {
   padding: 30px 30px 25px 30px;
@@ -480,7 +480,7 @@ section {
   width: 100%;
   position: relative;
   text-align: center;
-  background: #fff;
+  background: #D0BEAC;
 }
 .facts .count-box i {
   position: absolute;
@@ -488,10 +488,10 @@ section {
   left: 50%;
   transform: translateX(-50%);
   font-size: 24px;
-  background: #D0BEAC;
-  color: #fff;
+  background: #fff;
+  color: #D0BEAC;
   border-radius: 50px;
-  border: solid white 2.5px;
+  border: solid #D0BEAC 2.5px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -571,6 +571,15 @@ section {
 /*--------------------------------------------------------------
 # Akills
 --------------------------------------------------------------*/
+.skills {
+  background: #D0BEAC;
+  border-top-style: double;
+  border-top-width: 15px;
+  border-top-color: #fff;
+  border-bottom-style: double;
+  border-bottom-width: 15px;
+  border-bottom-color: #fff;
+}
 .skills .progress {
   height: 60px;
   display: block;
@@ -601,12 +610,16 @@ section {
 }
 
 .skills .count-box {
-  /* padding: 30px 30px 25px 30px; */
+  padding: 15px 0px;
   margin-top: 30px;
   width: 100%;
   position: relative;
   text-align: center;
-  background: #D0BEAC;
+  border-radius: 15px;
+  background-image: linear-gradient(180deg,rgba(255,255,255,0.86) 0%,rgba(255,255,255,0.86) 100%), url('../img/hero-bg-2.jpg');
+  background-position: top center;
+  background-size: cover;
+  box-shadow: 0px -12px 18px -6px rgba(0,0,0,0.17);
 }
 
 .skills .count-box h2 {
@@ -614,6 +627,7 @@ section {
   font-size: 50px;
   font-weight: 700;
   font-family: "Snell Roundhand", sans-serif;
+  color: #bfa184;
 }
 
 /*--------------------------------------------------------------
@@ -1404,4 +1418,34 @@ section {
   font-size: 12px;
   line-height: 1.42857;
   color: white;
+}
+
+.hr-acara-pernikahan {
+  width: 40%;
+  border: 0.5px solid #D0BEAC;
+  margin: 0 auto;
+}
+
+.tanggal-acara {
+  margin-top: 10px;
+}
+
+.waktu-acara {
+  margin-top: 10px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.lokasi-acara {
+  margin-top: 10px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.alamat-acara {
+  margin-top: 10px;
+}
+
+.div-alamat-acara {
+  margin: 0 auto;
 }
