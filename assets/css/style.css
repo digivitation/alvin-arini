@@ -545,7 +545,7 @@ section {
     width: 100%;
     position: relative;
     text-align: center;
-    background: #fff;
+    background: #D0BEAC;
   }
 
   .facts .count-box h2 {
@@ -1448,4 +1448,18 @@ section {
 
 .div-alamat-acara {
   margin: 0 auto;
+}
+
+.btn-info {
+  background-color: #D0BEAC !important;
+  border-color: #D0BEAC !important;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
