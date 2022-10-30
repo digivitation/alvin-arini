@@ -569,7 +569,7 @@
       <div class="container" data-aos="fade-up">
         <div class="col-lg-12">
           <form class="form-guest-book">
-            <i class="bi bi-card-heading"> <span>15 Ucapan</span></i>
+            <i class="bi bi-card-heading"> <span id="countUcapan"></span></i>
             <hr>
             <div class="form-group">
               <input type="text" class="form-control" id="namaPengirim" placeholder="Nama" required>
@@ -582,63 +582,7 @@
             </div>
             
             <hr>
-            <div class="row list-pesan" id="list-pesan">
-              <div class="ml-2">
-                <strong>Sender Name</strong>
-                <p>Message</p>
-                <hr>
-              </div>
-              <div class="ml-2">
-                <strong>Sender Name</strong>
-                <p>Message</p>
-                <hr>
-              </div>
-              <div class="ml-2">
-                <strong>Sender Name</strong>
-                <p>Message</p>
-                <hr>
-              </div>
-              <div class="ml-2">
-                <strong>Sender Name</strong>
-                <p>Message</p>
-                <hr>
-              </div>
-              <div class="ml-2">
-                <strong>Sender Name</strong>
-                <p>Message</p>
-                <hr>
-              </div>
-              <div class="ml-2">
-                <strong>Sender Name</strong>
-                <p>Message</p>
-                <hr>
-              </div>
-              <div class="ml-2">
-                <strong>Sender Name</strong>
-                <p>Message</p>
-                <hr>
-              </div>
-              <div class="ml-2">
-                <strong>Sender Name</strong>
-                <p>Message</p>
-                <hr>
-              </div>
-              <div class="ml-2">
-                <strong>Sender Name</strong>
-                <p>Message</p>
-                <hr>
-              </div>
-              <div class="ml-2">
-                <strong>Sender Name</strong>
-                <p>Message</p>
-                <hr>
-              </div>
-              <div class="ml-2">
-                <strong>Sender Name</strong>
-                <p>Message</p>
-                <hr>
-              </div>
-            </div>
+            <div class="row list-pesan" id="list-pesan"></div>
           </form>
 
         </div>
@@ -799,24 +743,42 @@
   const ENV = 'dev';
   const url = baseUrls[ENV] + '/invitation/';
   const referenceNumber = new URLSearchParams(window.location.search).get("ref")
-    console.log("referenceNumber: ", referenceNumber)
-    const response = fetch(
-      url + referenceNumber,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        }
+  console.log("referenceNumber: ", referenceNumber)
+  const response = fetch(
+    url + referenceNumber,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
       }
-    ).then(res => res.json().then(json => {
-      if (json.status != 'SUCCESS') {
-        return null
+    }
+  ).then(res => res.json().then(json => {
+    if (json.status != 'SUCCESS') {
+      return null
+    }
+    return json.data
+  })).catch(error => {
+    return null;
+  });
+  
+  const greetingCardResponses = fetch(
+    baseUrls[ENV] + '/greeting-card',
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
       }
-      return json.data
-    })).catch(error => {
-      return null;
-    });
+    }
+  ).then(res => res.json().then(json => {
+    if (json.status != 'SUCCESS') {
+      return null
+    }
+    return json.data
+  })).catch(error => {
+    return null;
+  });
 
   window.onload = async () => {
     const data = await response;
@@ -830,6 +792,20 @@
     }
     $(".coupleNameTitle").html(coupleName);
     $("#guestName").html(guestName);
+
+    const greetingCardData = await greetingCardResponses;
+
+    $('#countUcapan').html(greetingCardData.length + " Ucapan");
+    greetingCardData.forEach((greetingCard) => {
+      const greetingCardElement = `
+        <div class="ml-2">
+          <strong>${greetingCard.guest_name}</strong>
+          <p>${greetingCard.message}</p>
+          <hr>
+        </div>
+      `;
+      $("#list-pesan").append(greetingCardElement);
+    });
   };
 
   $('#bukaMap').click(function () {
@@ -850,7 +826,6 @@
       $('#salinText').html('<strong><i class="bi bi-files"></i> Salin Nomor Rekening</strong>');
     }, 2000);
   }
-  
 </script>
 
   <!-- Template Main JS File -->
