@@ -569,7 +569,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
+# Skills
 --------------------------------------------------------------*/
 .skills {
   background: #D0BEAC;
@@ -628,6 +628,41 @@ section {
   font-weight: 700;
   font-family: "Snell Roundhand", sans-serif;
   color: #bfa184;
+}
+
+/*--------------------------------------------------------------
+# Amplop
+--------------------------------------------------------------*/
+.amplop {
+  background: #D0BEAC;
+  color: #fff;
+}
+
+.amplop h2 {
+  color: #FFF;
+}
+
+.amplop-digital {
+  max-width: 400px;
+}
+
+.btn-default {
+  background-color: #FFF !important;
+  border-radius: 7.5px;
+}
+
+.btn-default {
+  background-color: #FFF !important;
+  border-radius: 7.5px;
+}
+
+.btn-confirm {
+  background-color: rgb(117, 197, 47) !important;
+  border-radius: 7.5px;
+}
+
+#modalConfirm {
+  color: darkslategray !important;
 }
 
 /*--------------------------------------------------------------
@@ -1332,11 +1367,15 @@ section {
   .kasih-spasi {
     margin-top: 1rem !important;
   }
+
+  .amplop-digital {
+    max-width: 300px;
+  }
   
 }
 
 .pulse {
-  background-color: #b89068;
+  background-color: #b89068 !important;
   color: #ffffff;
   border: none;
   border-radius: 20px;
@@ -1451,8 +1490,28 @@ section {
 }
 
 .btn-info {
-  background-color: #D0BEAC !important;
-  border-color: #D0BEAC !important;
+  background-color: #b89068 !important;
+  border-color: #b89068 !important;
+}
+
+.form-guest-book {
+  background-color: #D0BEAC;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.list-pesan {
+  max-height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.list-pesan::-webkit-scrollbar {
+  max-height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
