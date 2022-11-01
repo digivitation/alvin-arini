@@ -1501,7 +1501,7 @@ section {
 }
 
 .list-pesan {
-  max-height: 200px;
+  max-height: 300px;
   overflow-y: scroll;
   overflow-x: hidden;
   -ms-overflow-style: none;  /* IE and Edge */
@@ -1509,7 +1509,7 @@ section {
 }
 
 .list-pesan::-webkit-scrollbar {
-  max-height: 200px;
+  max-height: 300px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -1521,4 +1521,12 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+.protokol-kesehatan img {
+  max-width: 150px;
+}
+
+.protokol-kesehatan p {
+  font-size: 12px;
 }
