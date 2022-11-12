@@ -177,6 +177,10 @@ aAdd audio
     background-image: linear-gradient(180deg,rgba(142, 142, 142, 0.25) 0%,rgba(142, 142, 142, 0.25) 100%), url('../img/DCIM/STRQ0633-media.JPG');
     background-size: cover;
   }
+
+  .services {
+    background-repeat: repeat-y;
+  }
 }
 
 @media (min-width: 992px) {
@@ -967,7 +971,6 @@ section {
   background-image: linear-gradient(rgba(255,255,255,.65), rgba(255,255,255,.65)), url('../img/bg-1.png');
   background-size: contain;
   background-repeat: repeat-x;
-  background-repeat: repeat-y;
 }
 
 .services .icon-box {
@@ -1409,6 +1412,10 @@ section {
     background-image: linear-gradient(180deg,rgba(142, 142, 142, 0.25) 0%,rgba(142, 142, 142, 0.25) 100%), url('../img/DCIM/STRQ0633-media.JPG');
     background-size: cover;
   }
+
+  .services {
+    background-repeat: repeat-y;
+  }
 }
 
 .icon-cover-image {
@@ -1460,6 +1467,10 @@ section {
   .facts {
     background-image: linear-gradient(180deg,rgba(142, 142, 142, 0.25) 0%,rgba(142, 142, 142, 0.25) 100%), url('../img/DCIM/STRQ0633-media.JPG');
     background-size: cover;
+  }
+
+  .services {
+    background-repeat: repeat-y;
   }
   
 }
