@@ -167,6 +167,16 @@ aAdd audio
     border-right: 1px solid #e6e9ec;
     left: -300px;
   }
+
+  .skills {
+    background-image: url('../img/DCIM/STRQ0607-media.JPG');
+    background-size: cover;
+  }
+
+  .facts {
+    background-image: linear-gradient(180deg,rgba(142, 142, 142, 0.25) 0%,rgba(142, 142, 142, 0.25) 100%), url('../img/DCIM/STRQ0633-media.JPG');
+    background-size: cover;
+  }
 }
 
 @media (min-width: 992px) {
@@ -437,6 +447,11 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about {
+  background-image: linear-gradient(rgba(255,255,255,.65), rgba(255,255,255,.65)), url('../img/bg.png');
+  background-size: contain;
+  background-repeat: repeat-x;
+}
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
@@ -468,7 +483,8 @@ section {
 # Facts
 --------------------------------------------------------------*/
 .facts {
-  background: #fff !important;
+  background-image: linear-gradient(180deg,rgba(142, 142, 142, 0.25) 0%,rgba(142, 142, 142, 0.25) 100%), url('../img/DCIM/STRQ0633.JPG');
+  background-size: cover;
 }
 .facts .count-box {
   padding: 30px 30px 25px 30px;
@@ -480,7 +496,8 @@ section {
   width: 100%;
   position: relative;
   text-align: center;
-  background: #D0BEAC;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,1.5);
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
 }
 .facts .count-box i {
   position: absolute;
@@ -545,7 +562,8 @@ section {
     width: 100%;
     position: relative;
     text-align: center;
-    background: #D0BEAC;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1.5);
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
   }
 
   .facts .count-box h2 {
@@ -566,13 +584,24 @@ section {
     margin: 0;
     font-size: 14px;
   }
+
+  .skills {
+    background-image: url('../img/DCIM/STRQ0607-media.JPG');
+    background-size: cover;
+  }
+
+  .facts {
+    background-image: linear-gradient(180deg,rgba(142, 142, 142, 0.25) 0%,rgba(142, 142, 142, 0.25) 100%), url('../img/DCIM/STRQ0633-media.JPG');
+    background-size: cover;
+  }
 }
 
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
 .skills {
-  background: #D0BEAC;
+  background-image: url('../img/DCIM/STRQ0607.JPG');
+  background-size: cover;
   border-top-style: double;
   border-top-width: 15px;
   border-top-color: #fff;
@@ -616,10 +645,19 @@ section {
   position: relative;
   text-align: center;
   border-radius: 15px;
-  background-image: linear-gradient(180deg,rgba(255,255,255,0.86) 0%,rgba(255,255,255,0.86) 100%), url('../img/hero-bg-2.jpg');
+  box-shadow: 0px -12px 18px -6px rgba(0,0,0,0.17);
+}
+
+.skills .akad {
+  background-image: linear-gradient(180deg,rgba(255,255,255,0.75) 0%,rgba(255,255,255,0.75) 100%), url('../img/DCIM/STRQ0862.JPG');
   background-position: top center;
   background-size: cover;
-  box-shadow: 0px -12px 18px -6px rgba(0,0,0,0.17);
+}
+
+.skills .resepsi {
+  background-image: linear-gradient(180deg,rgba(255,255,255,0.75) 0%,rgba(255,255,255,0.75) 100%), url('../img/DCIM/STRQ0752.JPG');
+  background-position: top center;
+  background-size: cover;
 }
 
 .skills .count-box h2 {
@@ -668,6 +706,11 @@ section {
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
+.resume {
+  background-image: linear-gradient(rgba(255,255,255,.65), rgba(255,255,255,.65)), url('../img/bg.png');
+  background-size: contain;
+  background-repeat: repeat-x;
+}
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
@@ -722,6 +765,12 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+.portfolio {
+  background-image: linear-gradient(rgba(255,255,255,.65), rgba(255,255,255,.65)), url('../img/bg.png');
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+}
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
@@ -914,6 +963,13 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+.services {
+  background-image: linear-gradient(rgba(255,255,255,.65), rgba(255,255,255,.65)), url('../img/bg-1.png');
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+}
+
 .services .icon-box {
   text-align: center;
   padding: 70px 20px 80px 20px;
@@ -1084,11 +1140,24 @@ section {
   .testimonials .testimonial-item p {
     width: 80%;
   }
+  .skills {
+    background-image: url('../img/DCIM/STRQ0607.JPG');
+    background-size: cover;
+  }
+  .facts {
+    background-image: linear-gradient(180deg,rgba(142, 142, 142, 0.25) 0%,rgba(142, 142, 142, 0.25) 100%), url('../img/DCIM/STRQ0633.JPG');
+    background-size: cover;
+  }
 }
 
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact {
+  background-image: linear-gradient(rgba(255,255,255,.65), rgba(255,255,255,.65)), url('../img/bg.png');
+  background-size: contain;
+  background-repeat: repeat-x;
+}
 .contact .info {
   width: 100%;
   background: #fff;
@@ -1213,11 +1282,12 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #f7f8f9;
-  color: #45505b;
+  background-image: linear-gradient(180deg,rgba(0, 0, 0, 0.25) 0%,rgba(0, 0, 0, 0.25) 100%), url('../img/DCIM/STRQ0715.JPG');
+  background-size: cover;
+  color: #fff;
   font-size: 14px;
   text-align: center;
-  padding: 30px 0;
+  padding: 100px 0;
 }
 #footer h3 {
   font-size: 36px;
@@ -1263,7 +1333,7 @@ section {
 }
 
 .modal-background {
-  background-image: url('../img/hero-bg-2.jpg');
+  background-image: url('../img/DCIM/STRQ0103.JPG');
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
@@ -1305,7 +1375,7 @@ section {
 @media (max-width: 992px) {
   .modal-background {
     text-align: center;
-    background-image: url('../img/hero-bg-2-mobile.jpg');
+    background-image: url('../img/DCIM/STRQ0103-mobile.JPG');
   }
   .modal-background h1 {
     font-size: 40px;
@@ -1328,6 +1398,16 @@ section {
     border-bottom-right-radius: 40px;
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
+  }
+
+  .skills {
+    background-image: url('../img/DCIM/STRQ0607-media.JPG');
+    background-size: cover;
+  }
+
+  .facts {
+    background-image: linear-gradient(180deg,rgba(142, 142, 142, 0.25) 0%,rgba(142, 142, 142, 0.25) 100%), url('../img/DCIM/STRQ0633-media.JPG');
+    background-size: cover;
   }
 }
 
@@ -1370,6 +1450,16 @@ section {
 
   .amplop-digital {
     max-width: 300px;
+  }
+
+  .skills {
+    background-image: url('../img/DCIM/STRQ0607-media.JPG');
+    background-size: cover;
+  }
+
+  .facts {
+    background-image: linear-gradient(180deg,rgba(142, 142, 142, 0.25) 0%,rgba(142, 142, 142, 0.25) 100%), url('../img/DCIM/STRQ0633-media.JPG');
+    background-size: cover;
   }
   
 }
