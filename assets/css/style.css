@@ -69,7 +69,7 @@ aAdd audio
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #b89068;
+  background: #596C65;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -81,7 +81,7 @@ aAdd audio
   line-height: 0;
 }
 .btn-audio:hover {
-  background: #c5a280;
+  background: #b1b89c;
   color: #fff;
 }
 .btn-audio.active {
@@ -108,7 +108,7 @@ aAdd audio
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #0563bb;
+  border: 6px solid #9AA086;
   border-top-color: #fff;
   border-bottom-color: #fff;
   border-radius: 50%;
@@ -676,7 +676,7 @@ section {
 # Amplop
 --------------------------------------------------------------*/
 .amplop {
-  background: #D0BEAC;
+  background: #9AA086;
   color: #fff;
 }
 
@@ -699,8 +699,13 @@ section {
 }
 
 .btn-confirm {
-  background-color: rgb(117, 197, 47) !important;
+  background-color: #596C65 !important;
   border-radius: 7.5px;
+}
+
+.btn-success {
+  border-color: #596C65 !important;
+  border-radius: 50px;
 }
 
 #modalConfirm {
@@ -1476,7 +1481,7 @@ section {
 }
 
 .pulse {
-  background-color: #b89068 !important;
+  background-color: #9AA086!important;
   color: #ffffff;
   border: none;
   border-radius: 20px;
@@ -1484,19 +1489,19 @@ section {
   font-size: 12px;
   text-decoration: none;
   cursor: pointer;
-  box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+  box-shadow: 0 0 0 rgba(103, 204, 44, 0.4);
   animation: pulse 2s infinite;
 }
 .pulse:hover {
-  background-color: #c5a280;
+  background-color: #3f7856fc;
   color: #ffffff;
-  box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+  box-shadow: 0 0 0 rgba(103, 204, 44, 0.4);
   animation: pulse 2s linear infinite;
 }
 
 @-webkit-keyframes pulse {
   0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    -webkit-box-shadow: 0 0 0 0 rgba(103, 204, 44, 0.4);
   }
   70% {
       -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
@@ -1507,16 +1512,16 @@ section {
 }
 @keyframes pulse {
   0% {
-    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
-    box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    -moz-box-shadow: 0 0 0 0 rgba(103, 204, 44, 0.4);
+    box-shadow: 0 0 0 0 rgba(103, 204, 44, 0.4);
   }
   70% {
-      -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
-      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      -moz-box-shadow: 0 0 0 10px rgba(103, 204, 44, 0);
+      box-shadow: 0 0 0 10px rgba(103, 204, 44, 0);
   }
   100% {
-      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
-      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      -moz-box-shadow: 0 0 0 0 rgba(103, 204, 44, 0);
+      box-shadow: 0 0 0 0 rgba(103, 204, 44, 0);
   }
 }
 
@@ -1526,7 +1531,7 @@ section {
   border-bottom-right-radius: 200px;
   border-top-left-radius: 500px;
   border-top-right-radius: 500px;
-  border: #b89068;
+  border: #9AA086;
   border-width: 10px 10px 15px 10px;
   border-style: solid;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
@@ -1546,7 +1551,7 @@ section {
 }
 
 .btn-instagram {
-  background-color: #b89068;
+  background-color: #9AA086;
 }
 
 .btn-circle {
@@ -1591,12 +1596,12 @@ section {
 }
 
 .btn-info {
-  background-color: #b89068 !important;
-  border-color: #b89068 !important;
+  background-color: #9AA086 !important;
+  border-color: #9AA086 !important;
 }
 
 .form-guest-book {
-  background-color: #D0BEAC;
+  background-color: #9AA086;
   padding: 15px;
   border-radius: 10px;
 }
