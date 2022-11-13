@@ -32,10 +32,10 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 @font-face {
   font-family: "Monoline Signature"; 
-  src: url("//db.onlinewebfonts.com/t/a3c8a415c77c27fad9a1494194c949ca.eot"); 
-  src: url("//db.onlinewebfonts.com/t/a3c8a415c77c27fad9a1494194c949ca.eot?#iefix") format("embedded-opentype"), 
-  url("//db.onlinewebfonts.com/t/a3c8a415c77c27fad9a1494194c949ca.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/a3c8a415c77c27fad9a1494194c949ca.woff") format("woff"), 
-  url("//db.onlinewebfonts.com/t/a3c8a415c77c27fad9a1494194c949ca.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/a3c8a415c77c27fad9a1494194c949ca.svg#Monoline Signature") format("svg"); 
+  src: url("../fonts/a3c8a415c77c27fad9a1494194c949ca.eot"); 
+  src: url("../fonts/a3c8a415c77c27fad9a1494194c949ca.eot?#iefix") format("embedded-opentype"), 
+  url("../fonts/a3c8a415c77c27fad9a1494194c949ca.woff2") format("woff2"), url("../fonts/a3c8a415c77c27fad9a1494194c949ca.woff") format("woff"), 
+  url("../fonts/a3c8a415c77c27fad9a1494194c949ca.ttf") format("truetype"); 
 }
 
 /*--------------------------------------------------------------
@@ -194,7 +194,7 @@ aAdd audio
   }
 
   .services {
-    background-repeat: repeat-y;
+    background-repeat: repeat;
   }
 }
 
@@ -331,8 +331,9 @@ aAdd audio
   font-weight: 700;
   line-height: 56px;
   color: #ffffff !important;
-  font-family: "Snell Roundhand", sans-serif;
+  font-family: "monoline signature", Sans-serif;
 }
+
 #hero p {
   color: #ffffff;
   margin: 15px 0 0 0;
@@ -341,7 +342,10 @@ aAdd audio
 }
 
 #hero .desc {
-  font-size: 18px;
+  font-size: 25px;
+  font-family: 'Pompiere', cursive;
+  line-height: normal;
+  letter-spacing: 2.5px;
 }
 
 #hero p span {
@@ -394,7 +398,8 @@ section {
   padding-bottom: 30px;
 }
 .section-title h2 {
-  font-size: 32px;
+  font-size: 50px;
+  font-family: 'Pompiere', cursive !important;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -418,12 +423,14 @@ section {
   display: block;
   width: 40px;
   height: 3px;
-  background: darkslategray;
+  background: #9AA086;
   bottom: 0;
   left: calc(50% - 20px);
 }
 .section-title p {
   margin-bottom: 0;
+  font-family: "Itim", cursive;
+  font-size: 25px;
 }
 
 
@@ -468,13 +475,14 @@ section {
 --------------------------------------------------------------*/
 .about {
   background-image: linear-gradient(rgba(255,255,255,.65), rgba(255,255,255,.65)), url('../img/bg.png');
-  background-size: contain;
-  background-repeat: repeat-x;
+  background-size: 600px;
+  background-repeat: repeat;
 }
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
   color: #728394;
+  font-family: "Itim", cursive;
 }
 .about .content ul {
   list-style: none;
@@ -498,6 +506,17 @@ section {
   margin-bottom: 0;
 }
 
+.about h3 {
+  font-family: "Itim", cursive;
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.about span {
+  font-family: "Itim", cursive;
+  font-size: 20px;
+}
+
 /*--------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/
@@ -515,6 +534,7 @@ section {
   width: 100%;
   position: relative;
   text-align: center;
+  color: #fff !important;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,1.5);
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
 }
@@ -538,20 +558,24 @@ section {
   font-size: 36px;
   display: block;
   font-weight: 600;
-  color: #011426;
 }
 .facts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: "Raleway", sans-serif;
-  font-size: 14px;
+  font-family: "Itim", cursive;
+  font-size: 20px;
 }
 
 .facts .count-box h2 {
   margin: 0;
   font-size: 50px;
   font-weight: 700;
-  font-family: "Snell Roundhand", sans-serif;
+  font-family: "monoline signature", sans-serif;
+}
+
+.facts h5 {
+  font-family: "Itim", cursive;
+  font-size: 25px;
 }
 
 @media (max-width: 992px) {
@@ -589,7 +613,7 @@ section {
     margin: 0;
     font-size: 30px;
     font-weight: 700;
-    font-family: "Snell Roundhand", sans-serif;
+    font-family: "monoline signature", sans-serif;
   }
 
   .facts .count-box h1 {
@@ -601,7 +625,8 @@ section {
 
   .facts .count-box h5 {
     margin: 0;
-    font-size: 14px;
+    font-size: 18px;
+    font-family: "Itim", cursive;
   }
 
   .skills {
@@ -681,10 +706,27 @@ section {
 
 .skills .count-box h2 {
   margin: 0;
-  font-size: 50px;
-  font-weight: 700;
-  font-family: "Snell Roundhand", sans-serif;
-  color: #bfa184;
+  font-size: 45px;
+  font-family: "monoline signature", sans-serif;
+  color: #7b8752 !important;
+}
+
+.skills .count-box p {
+  font-family: "Itim", cursive;
+  color: #000 !important;
+  font-size: 20px;
+}
+
+.skills h2 {
+  color: #fff !important;
+}
+
+.skills h2::after {
+  background: #fff !important;
+}
+
+.skills p {
+  color: #fff !important;
 }
 
 /*--------------------------------------------------------------
@@ -696,7 +738,11 @@ section {
 }
 
 .amplop h2 {
-  color: #FFF;
+  color: #FFF !important;
+}
+
+.amplop h2::after {
+  background: #fff !important;
 }
 
 .amplop-digital {
@@ -732,8 +778,8 @@ section {
 --------------------------------------------------------------*/
 .resume {
   background-image: linear-gradient(rgba(255,255,255,.65), rgba(255,255,255,.65)), url('../img/bg.png');
-  background-size: contain;
-  background-repeat: repeat-x;
+  background-size: 600px;
+  background-repeat: repeat;
 }
 .resume .resume-title {
   font-size: 26px;
@@ -791,9 +837,8 @@ section {
 --------------------------------------------------------------*/
 .portfolio {
   background-image: linear-gradient(rgba(255,255,255,.65), rgba(255,255,255,.65)), url('../img/bg.png');
-  background-size: contain;
-  background-repeat: repeat-x;
-  background-repeat: repeat-y;
+  background-size: 600px;
+  background-repeat: repeat;
 }
 .portfolio .portfolio-item {
   margin-bottom: 30px;
@@ -990,7 +1035,7 @@ section {
 .services {
   background-image: linear-gradient(rgba(255,255,255,.65), rgba(255,255,255,.65)), url('../img/bg-1.png');
   background-size: contain;
-  background-repeat: repeat-x;
+  background-repeat: repeat;
 }
 
 .services .icon-box {
@@ -1178,8 +1223,8 @@ section {
 --------------------------------------------------------------*/
 .contact {
   background-image: linear-gradient(rgba(255,255,255,.65), rgba(255,255,255,.65)), url('../img/bg.png');
-  background-size: contain;
-  background-repeat: repeat-x;
+  background-size: 600px;
+  background-repeat: repeat;
 }
 .contact .info {
   width: 100%;
@@ -1391,7 +1436,7 @@ section {
 }
 
 .modal-background strong {
-  font-size: 26px;
+  font-size: 35px;
   font-family: 'Square Peg', cursive;
   color: #ffffff !important;
 }
@@ -1435,7 +1480,7 @@ section {
   }
 
   .services {
-    background-repeat: repeat-y;
+    background-repeat: repeat;
   }
 }
 
@@ -1491,7 +1536,23 @@ section {
   }
 
   .services {
-    background-repeat: repeat-y;
+    background-repeat: repeat;
+  }
+
+  .facts .count-box h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .facts .count-box h5 {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .facts .count-box p {
+    margin: 0;
+    font-size: 15px;
   }
   
 }
@@ -1583,7 +1644,7 @@ section {
 
 .hr-acara-pernikahan {
   width: 40%;
-  border: 0.5px solid #D0BEAC;
+  border: 0.5px solid #7b8752;
   margin: 0 auto;
 }
 
@@ -1645,10 +1706,30 @@ body {
   scrollbar-width: none;  /* Firefox */
 }
 
+.protokol-kesehatan {
+  text-align: center;
+}
+
 .protokol-kesehatan img {
-  max-width: 150px;
+  max-width: 100px;
 }
 
 .protokol-kesehatan p {
-  font-size: 12px;
+  font-size: 15px;
+  font-family: "Itim", cursive;
+}
+
+.tulisan-pernikahan {
+  margin-bottom: 45px !important;
+  font-family: 'Pompiere', cursive !important;
+  font-size: 50px !important;
+}
+
+.giftHadiahText {
+  font-family: "Itim", cursive;
+  font-size: 20px;
+}
+
+.img-doa-ucapan {
+  max-width: 600px;
 }
