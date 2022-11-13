@@ -28,6 +28,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
+# Font 
+--------------------------------------------------------------*/
+@font-face {
+  font-family: "Monoline Signature"; 
+  src: url("//db.onlinewebfonts.com/t/a3c8a415c77c27fad9a1494194c949ca.eot"); 
+  src: url("//db.onlinewebfonts.com/t/a3c8a415c77c27fad9a1494194c949ca.eot?#iefix") format("embedded-opentype"), 
+  url("//db.onlinewebfonts.com/t/a3c8a415c77c27fad9a1494194c949ca.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/a3c8a415c77c27fad9a1494194c949ca.woff") format("woff"), 
+  url("//db.onlinewebfonts.com/t/a3c8a415c77c27fad9a1494194c949ca.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/a3c8a415c77c27fad9a1494194c949ca.svg#Monoline Signature") format("svg"); 
+}
+
+/*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
 .back-to-top {
@@ -88,6 +99,10 @@ aAdd audio
   visibility: visible;
   opacity: 1;
 }
+
+/*--------------------------------------------------------------
+# Font
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Preloader
@@ -1361,22 +1376,23 @@ section {
 }
 
 .modal-background h1 {
-  font-size: 64px;
-  font-weight: 700;
+  font-size: 50;
+  font-weight: 500;
   line-height: 56px;
-  color: #ffffff !important;
-  font-family: "Snell Roundhand", sans-serif;
+  color: #9DA583!important;
+  font-family: "monoline signature", Sans-serif;
 }
 
 .modal-background p {
-  font-size: 18px;
-  font-family: "Poppins", sans-serif;
+  font-size: 35px;
+  font-family: 'Pompiere', cursive;
   line-height: 55px;
   color: #ffffff !important;
 }
 
 .modal-background strong {
   font-size: 26px;
+  font-family: 'Square Peg', cursive;
   color: #ffffff !important;
 }
 
