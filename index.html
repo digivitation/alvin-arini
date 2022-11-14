@@ -942,8 +942,10 @@
           /* Read more about handling dismissals below */
           if (result.dismiss === Swal.DismissReason.timer) {
             Swal.fire({
-              icon: 'success',
-              timer: 1000,
+              imageUrl: 'assets/img/swal.png',
+              imageWidth: 200,
+              imageHeight: 200,
+              timer: 1500,
               title: 'Terimakasih',
               showCloseButton: false,
               showConfirmButton: false,
@@ -1030,7 +1032,9 @@
             })
           } else {
             Swal.fire({
-              icon: 'success',
+              imageUrl: 'assets/img/swal.png',
+              imageWidth: 200,
+              imageHeight: 200,
               timer: 1500,
               title: 'Sukses',
               showCloseButton: false,
@@ -1097,7 +1101,7 @@
           $('#namaPengirim').val("");
           $('#messageContent').val("");
           Swal.fire({
-              icon: 'info',
+              icon: 'error',
               timer: 1500,
               title: 'Anda sudah pernah mengirim pesan.',
               showCloseButton: false,

@@ -161,6 +161,19 @@ aAdd audio
   .kasih-spasi {
     margin-top: 1rem !important;
   }
+
+  .list-pesan strong {
+    font-size: 16px !important;
+  }
+
+  .list-pesan p {
+    font-size: 18px !important;
+  }
+
+  .giftHadiahText {
+    font-size: 16px !important;
+  }
+
 }
 /*--------------------------------------------------------------
 # Header
@@ -195,6 +208,18 @@ aAdd audio
 
   .services {
     background-repeat: repeat;
+  }
+
+  .list-pesan p {
+    font-size: 18px !important;
+  }
+
+  .list-pesan strong {
+    font-size: 16px !important;
+  }
+
+  .giftHadiahText {
+    font-size: 16px !important;
   }
 }
 
@@ -381,7 +406,19 @@ aAdd audio
     line-height: 24px;
   }
   #hero .desc {
-    font-size: 12px;
+    font-size: 18px;
+  }
+
+  .list-pesan p {
+    font-size: 18px !important;
+  }
+
+  .list-pesan strong {
+    font-size: 16px !important;
+  }
+
+  .giftHadiahText {
+    font-size: 16px !important;
   }
 }
 
@@ -430,7 +467,7 @@ section {
 .section-title p {
   margin-bottom: 0;
   font-family: "Itim", cursive;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 
@@ -575,25 +612,46 @@ section {
 
 .facts h5 {
   font-family: "Itim", cursive;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 @media (max-width: 992px) {
-  /* #hero {
-    text-align: center;
+  .section-title h2 {
+    font-size: 40px;
   }
-  #hero h1 {
-    font-size: 32px;
-    line-height: 36px;
+
+  .section-title p {
+    font-size: 16px;
   }
-  #hero p {
-    margin-top: 10px;
+
+  .about h3 {
     font-size: 20px;
-    line-height: 24px;
   }
-  #hero .desc {
-    font-size: 12px;
-  } */
+
+  .about span {
+    font-size: 16px;
+  }
+
+  .skills .count-box h2 {
+    font-size: 35px;
+  }
+
+  .skills .count-box p {
+    font-size: 16px;
+  }
+
+  .list-pesan p {
+    font-size: 18px !important;
+  }
+
+  .list-pesan strong {
+    font-size: 16px !important;
+  }
+
+  .giftHadiahText {
+    font-size: 16px !important;
+  }
+
   .facts .count-box {
     padding: 30px 30px 25px 30px;
     border-top-left-radius: 50%;
@@ -1457,7 +1515,7 @@ section {
   }
 
   .modal-background strong {
-    font-size: 20px;
+    font-size: 27px;
     color: #ffffff !important;
   }
 
@@ -1472,6 +1530,26 @@ section {
   .skills {
     background-image: url('../img/DCIM/STRQ0607-media.JPG');
     background-size: cover;
+  }
+
+  .skills .count-box p {
+    font-size: 16px;
+  }
+
+  .skills .count-box h2 {
+    font-size: 35px;
+  }
+
+  .list-pesan p {
+    font-size: 18px !important;
+  }
+
+  .list-pesan strong {
+    font-size: 16px !important;
+  }
+
+  .giftHadiahText {
+    font-size: 16px !important;
   }
 
   .facts {
@@ -1508,12 +1586,12 @@ section {
 
   .modal-background p {
     margin-top: 5px;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   .modal-background strong {
-    font-size: 14px;
+    font-size: 27px;
     color: #ffffff !important;
   }
 
@@ -1528,6 +1606,26 @@ section {
   .skills {
     background-image: url('../img/DCIM/STRQ0607-media.JPG');
     background-size: cover;
+  }
+
+  .skills .count-box p {
+    font-size: 16px;
+  }
+
+  .skills .count-box h2 {
+    font-size: 35px;
+  }
+
+  .list-pesan p {
+    font-size: 16px !important;
+  }
+
+  .list-pesan strong {
+    font-size: 16px !important;
+  }
+
+  .giftHadiahText {
+    font-size: 16px !important;
   }
 
   .facts {
@@ -1684,17 +1782,37 @@ section {
 }
 
 .list-pesan {
-  max-height: 300px;
-  overflow-y: scroll;
+  max-height: 600px;
+  overflow-y: auto;
   overflow-x: hidden;
+  font-family: "Itim", cursive;
   -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  scrollbar-width: 10px;  /* Firefox */
+}
+
+.list-pesan p {
+  font-size: 21px;
+  font-family: 'Pompiere', cursive !important;
+}
+
+.list-pesan strong {
+  font-size: 19px;
 }
 
 .list-pesan::-webkit-scrollbar {
-  max-height: 300px;
-  overflow-y: scroll;
+  max-height: 600px;
+  width: 10px;
+  overflow-y: auto;
   overflow-x: hidden;
+}
+
+.list-pesan::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.list-pesan::-webkit-scrollbar-thumb {
+  background-color: rgb(100, 100, 100);
+  outline: 1px solid rgb(100, 100, 100);
 }
 
 body::-webkit-scrollbar {
@@ -1732,4 +1850,8 @@ body {
 
 .img-doa-ucapan {
   max-width: 600px;
+}
+
+.bi-heart-fill {
+  color: #ec3434 !important;
 }
