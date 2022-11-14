@@ -108,7 +108,7 @@
             <div class="text w-100 text-center">
               <p class="tulisan-pernikahan">Pernikahan</p>
               <h1 class="coupleNameTitle"></h1>
-              <p class="desc mt-5">Tanpa mengurangi rasa hormat,<br>Kami mengundang Bapak/Ibu/Saudara/i<br>Untuk hadir di acara pernikahan kami.</p>
+              <p class="desc mt-5 descHero"></p>
             </div>
           </div>
         </div>
@@ -126,7 +126,7 @@
             <div class="text w-100 text-center">
               <p class="tulisan-pernikahan">Pernikahan</p>
               <h1>Alvin & Arini</h1>
-              <p class="desc mt-5">Tanpa mengurangi rasa hormat,<br>Kami mengundang Bapak/Ibu/Saudara/i<br>Untuk hadir di acara pernikahan kami.</p>
+              <p class="desc mt-5 descHero"></p>
             </div>
           </div>
         </div>
@@ -144,7 +144,7 @@
             <div class="text w-100 text-center">
               <p class="tulisan-pernikahan">Pernikahan</p>
               <h1>Alvin & Arini</h1>
-              <p class="desc mt-5">Tanpa mengurangi rasa hormat,<br>Kami mengundang Bapak/Ibu/Saudara/i<br>Untuk hadir di acara pernikahan kami.</p>
+              <p class="desc mt-5 descHero"></p>
             </div>
           </div>
         </div>
@@ -162,7 +162,7 @@
             <div class="text w-100 text-center">
               <p class="tulisan-pernikahan">Pernikahan</p>
               <h1>Alvin & Arini</h1>
-              <p class="desc mt-5">Tanpa mengurangi rasa hormat,<br>Kami mengundang Bapak/Ibu/Saudara/i<br>Untuk hadir di acara pernikahan kami.</p>
+              <p class="desc mt-5 descHero"></p>
             </div>
           </div>
         </div>
@@ -178,7 +178,7 @@
 
         <div class="section-title">
           <h2>Pengantin</h2>
-          <p>Dengan memohon rahmat dan ridha Allah SWT, perkenankan kami mengundang Bapak/Ibu/Saudara/i ke acara pernikahan kami:</p>
+          <p class="descPengantin"></p>
         </div>
 
         <div class="row">
@@ -268,7 +268,7 @@
 
         <div class="section-title">
           <h2>Acara Pernikahan</h2>
-          <p>Dengan memohon Rahmat Allah Subhanahu wa Ta’ala dan dengan segenap kerendahan hati, perkenankanlah kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami yang akan dilaksanakan pada:</p>
+          <p class="descAcaraPernikahan"></p>
         </div>
 
         <div class="row skills-content">
@@ -557,7 +557,7 @@
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>Doa & Ucapan</h2>
-          <p>Suatu kebahagiaan bagi kami sekeluarga apabila berkenan hadir untuk memberikan doa restu kepada kami.</p>
+          <p class="descDoaUcapan"></p>
         </div>
 
         <div class="col-lg-12">
@@ -654,8 +654,7 @@
 <script>
   const baseUrls = {
     'local': 'http://localhost:8080/api',
-    'dev': 'https://dev-invitation.herokuapp.com/api',
-    'prod': 'https://be-wedding.piinalpin.com/api'
+    'dev': 'https://digivitation-web-service.fly.dev/api'
   };
 
   const ENV = 'dev';
@@ -710,6 +709,19 @@
     }
     $(".coupleNameTitle").html(coupleName).attr("class", "mt-4");
     $("#guestName").html(guestName);
+
+    if (data.is_parent_invitation == true) {
+      $(".descHero").html("Tanpa mengurangi rasa hormat,<br>Kami mengundang Bapak/Ibu/Saudara/i<br>Untuk hadir di acara pernikahan Putra dan Putri kami.");
+      $(".descPengantin").html("Dengan memohon rahmat dan ridha Allah SWT, perkenankan kami mengundang Bapak/Ibu/Saudara/i ke acara pernikahan Putra dan Putri kami:");
+      $(".descAcaraPernikahan").html("Dengan memohon Rahmat Allah Subhanahu wa Ta’ala dan dengan segenap kerendahan hati, perkenankanlah kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan Putra dan Putri kami yang akan dilaksanakan pada:");
+      $("#amplop").hide();
+      $(".descDoaUcapan").html("Suatu kebahagiaan bagi kami sekeluarga apabila berkenan hadir untuk memberikan doa restu kepada Putra dan Putri kami.");
+    } else {
+      $(".descHero").html("Tanpa mengurangi rasa hormat,<br>Kami mengundang Bapak/Ibu/Saudara/i<br>Untuk hadir di acara pernikahan kami.");
+      $(".descPengantin").html("Dengan memohon rahmat dan ridha Allah SWT, perkenankan kami mengundang Bapak/Ibu/Saudara/i ke acara pernikahan kami:");
+      $(".descAcaraPernikahan").html("Dengan memohon Rahmat Allah Subhanahu wa Ta’ala dan dengan segenap kerendahan hati, perkenankanlah kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami yang akan dilaksanakan pada:");
+      $(".descDoaUcapan").html("Suatu kebahagiaan bagi kami sekeluarga apabila berkenan hadir untuk memberikan doa restu kepada kami.");
+    }
 
     const greetingCardData = await greetingCardResponses;
 

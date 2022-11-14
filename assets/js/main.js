@@ -102,6 +102,24 @@
   })
 
   /**
+   * 
+   * Video block
+   */
+   $("video").on("pause", function (e) {
+      playBtn.classList.remove('pause')
+      iconPlay.classList.add('bi-pause-fill')
+      iconPlay.classList.remove('bi-play-fill')
+      song.play()
+    });
+
+    $("video").on("play", function (e) {
+      playBtn.classList.add('pause')
+      iconPlay.classList.remove('bi-pause-fill')
+      iconPlay.classList.add('bi-play-fill')
+      song.pause()
+    });
+
+  /**
    * Hero type effect
    */
   const typed = select('.typed')
