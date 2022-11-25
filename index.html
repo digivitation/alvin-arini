@@ -626,7 +626,7 @@
       <div class="copyright">
         &copy; 2022 <strong><span>piinalpin.com</span></strong>. All Rights Reserved
       </div>
-      <p>Song by Arda & Tantri - Pelabuhan Terakhir</p>
+      <p id="songTitle"></p>
     </div>
   </footer><!-- End Footer -->
 
@@ -719,12 +719,14 @@
       $(".descDoaUcapan").html("Suatu kebahagiaan bagi kami sekeluarga apabila berkenan hadir untuk memberikan doa restu kepada Putra dan Putri kami.");
 
       $('#audioSource').attr('src', './assets/audio/shania-twain.mp3');
+      $('#songTitle').html('Song by Shania Twain - From This Moment On');
     } else {
       $(".descHero").html("Tanpa mengurangi rasa hormat,<br>Kami mengundang Bapak/Ibu/Saudara/i<br>Untuk hadir di acara pernikahan kami.");
       $(".descPengantin").html("Dengan memohon rahmat dan ridha Allah SWT, perkenankan kami mengundang Bapak/Ibu/Saudara/i ke acara pernikahan kami:");
       $(".descAcaraPernikahan").html("Dengan memohon Rahmat Allah Subhanahu wa Ta’ala dan dengan segenap kerendahan hati, perkenankanlah kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami yang akan dilaksanakan pada:");
       $(".descDoaUcapan").html("Suatu kebahagiaan bagi kami sekeluarga apabila berkenan hadir untuk memberikan doa restu kepada kami.");
       $('#audioSource').attr('src', './assets/audio/sound.mp3');
+      $('#songTitle').html('Song by Arda & Tantri - Pelabuhan Terakhir');
     }
 
     const greetingCardData = await greetingCardResponses;
