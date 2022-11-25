@@ -633,7 +633,7 @@
   <div id="preloader"></div>
   <button type="button" id="btnPlay" class="btn-audio active d-flex align-items-center justify-content-center" style="border: none;"><i id="iconPlay" class="bi bi-pause-fill"></i></button>
   <audio id="song" loop>
-    <source src="./assets/audio/sound.mp3" type="audio/mp3">
+    <source src="" type="audio/mp3" id="audioSource">
   </audio>
 
   <!-- Vendor JS Files -->
@@ -717,11 +717,14 @@
       $(".descAcaraPernikahan").html("Dengan memohon Rahmat Allah Subhanahu wa Ta’ala dan dengan segenap kerendahan hati, perkenankanlah kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan Putra dan Putri kami yang akan dilaksanakan pada:");
       $("#amplop").hide();
       $(".descDoaUcapan").html("Suatu kebahagiaan bagi kami sekeluarga apabila berkenan hadir untuk memberikan doa restu kepada Putra dan Putri kami.");
+
+      $('#audioSource').attr('src', './assets/audio/shania-twain.mp3');
     } else {
       $(".descHero").html("Tanpa mengurangi rasa hormat,<br>Kami mengundang Bapak/Ibu/Saudara/i<br>Untuk hadir di acara pernikahan kami.");
       $(".descPengantin").html("Dengan memohon rahmat dan ridha Allah SWT, perkenankan kami mengundang Bapak/Ibu/Saudara/i ke acara pernikahan kami:");
       $(".descAcaraPernikahan").html("Dengan memohon Rahmat Allah Subhanahu wa Ta’ala dan dengan segenap kerendahan hati, perkenankanlah kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami yang akan dilaksanakan pada:");
       $(".descDoaUcapan").html("Suatu kebahagiaan bagi kami sekeluarga apabila berkenan hadir untuk memberikan doa restu kepada kami.");
+      $('#audioSource').attr('src', './assets/audio/sound.mp3');
     }
 
     const greetingCardData = await greetingCardResponses;
