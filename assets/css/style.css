@@ -1658,7 +1658,7 @@ section {
   /* animation: pulse 2s linear infinite; */
 }
 
-/* @-webkit-keyframes pulse {
+@-webkit-keyframes pulse {
   0% {
     -webkit-box-shadow: 0 0 0 0 rgba(103, 204, 44, 0.4);
   }
@@ -1669,6 +1669,7 @@ section {
       -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
   }
 }
+
 @keyframes pulse {
   0% {
     -moz-box-shadow: 0 0 0 0 rgba(103, 204, 44, 0.4);
@@ -1682,7 +1683,31 @@ section {
       -moz-box-shadow: 0 0 0 0 rgba(103, 204, 44, 0);
       box-shadow: 0 0 0 0 rgba(103, 204, 44, 0);
   }
-} */
+}
+
+@-moz-keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(103, 204, 44, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(103, 204, 44, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(103, 204, 44, 0);
+  }
+}
+
+@-o-keyframes pulse {
+  0% {
+    -o-box-shadow: 0 0 0 0 rgba(103, 204, 44, 0.4);
+  }
+  70% {
+      -o-box-shadow: 0 0 0 10px rgba(103, 204, 44, 0);
+  }
+  100% {
+      -o-box-shadow: 0 0 0 0 rgba(103, 204, 44, 0);
+  }
+}
 
 .foto-pasangan {
   max-width: 300px;
