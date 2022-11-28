@@ -37,122 +37,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/252def57a4.js" crossorigin="anonymous"></script>
 
-  <script>
-    const baseUrls = {
-      'local': 'http://localhost:8080/api',
-      'dev': 'https://digivitation-web-service.fly.dev/api'
-    };
-  
-    const ENV = 'dev';
-    const url = baseUrls[ENV] + '/invitation/';
-    const referenceNumber = new URLSearchParams(window.location.search).get("ref")
-    console.log("referenceNumber: ", referenceNumber)
-    const response = fetch(
-      url + referenceNumber,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        }
-      }
-    ).then(res => res.json().then(json => {
-      if (json.status != 'SUCCESS') {
-        return null
-      }
-      return json.data
-    })).catch(error => {
-      return null;
-    });
-    
-    const greetingCardResponses = fetch(
-      baseUrls[ENV] + '/greeting-card',
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        }
-      }
-    ).then(res => res.json().then(json => {
-      if (json.status != 'SUCCESS') {
-        return null
-      }
-      return json.data
-    })).catch(error => {
-      return null;
-    });
-  
-    window.onload = async () => {
-      const data = await response;
-      let coupleName = "Alvin & Arini";
-      let guestName = "Maaf Undangan tidak Tersedia Untuk Anda";
-      if (data != null) {
-        coupleName = data.couple_name;
-        guestName = data.guest_name;
-      } else {
-        $('#btnOpenInvitation').remove();
-      }
-      $(".coupleNameTitle").html(coupleName).attr("class", "mt-4");
-      $("#guestName").html(guestName);
-  
-      if (data.is_parent_invitation == true) {
-        $(".descHero").html("Tanpa mengurangi rasa hormat,<br>Kami mengundang Bapak/Ibu/Saudara/i<br>Untuk hadir di acara pernikahan Putra dan Putri kami.");
-        $(".descPengantin").html("Dengan memohon rahmat dan ridha Allah SWT, perkenankan kami mengundang Bapak/Ibu/Saudara/i ke acara pernikahan Putra dan Putri kami:");
-        $(".descAcaraPernikahan").html("Dengan memohon Rahmat Allah Subhanahu wa Ta’ala dan dengan segenap kerendahan hati, perkenankanlah kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan Putra dan Putri kami yang akan dilaksanakan pada:");
-        $("#amplop").hide();
-        $(".descDoaUcapan").html("Suatu kebahagiaan bagi kami sekeluarga apabila berkenan hadir untuk memberikan doa restu kepada Putra dan Putri kami.");
-  
-        $('#audioSource').attr('src', './assets/audio/shania-twain.mp3');
-        $('#songTitle').html('Song by Shania Twain - From This Moment On');
-      } else {
-        $(".descHero").html("Tanpa mengurangi rasa hormat,<br>Kami mengundang Bapak/Ibu/Saudara/i<br>Untuk hadir di acara pernikahan kami.");
-        $(".descPengantin").html("Dengan memohon rahmat dan ridha Allah SWT, perkenankan kami mengundang Bapak/Ibu/Saudara/i ke acara pernikahan kami:");
-        $(".descAcaraPernikahan").html("Dengan memohon Rahmat Allah Subhanahu wa Ta’ala dan dengan segenap kerendahan hati, perkenankanlah kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami yang akan dilaksanakan pada:");
-        $(".descDoaUcapan").html("Suatu kebahagiaan bagi kami sekeluarga apabila berkenan hadir untuk memberikan doa restu kepada kami.");
-        $('#audioSource').attr('src', './assets/audio/sound.mp3');
-        $('#songTitle').html('Song by Arda & Tantri - Pelabuhan Terakhir');
-      }
-  
-      const greetingCardData = await greetingCardResponses;
-  
-      $('#countUcapan').html(greetingCardData.length + " Ucapan");
-      let i = 0;
-      greetingCardData.forEach((greetingCard) => {
-        const greetingCardElement = `
-          <div class="row ml-2">
-            <strong>${greetingCard.guest_name}</strong>
-            <p>${greetingCard.message}</p>
-          </div>
-        `;
-        $("#list-pesan").append(greetingCardElement);
-      });
-  
-      $("#bankTransfer").hide();
-      $("#giftHadiah").hide();
-      $("#konfirmasi").hide();
-    };
-  
-    $('#bukaMap').click(function () {
-      window.open(
-        'https://www.google.com/maps/place/Jl.+Jawa+No.10,+Cigobang,+Gunungsimping,+Kec.+Cilacap+Tengah,+Kabupaten+Cilacap,+Jawa+Tengah+53211/@-7.7058316,109.0246014,17z/data=!3m1!4b1!4m5!3m4!1s0x2e6512c62cc1fa8d:0xeb0f7cd578af9d93!8m2!3d-7.7058316!4d109.0246014',
-        '_blank'
-      )
-    });
-  
-    function copyText() {
-      var copyText = document.getElementById("noRek");
-      copyText.hidden = false;
-      copyText.select();
-      document.execCommand("copy");
-      copyText.hidden = true;
-      $('#salinText').html('<strong>Nomor rekening berhasil disalin.</strong>');
-      setTimeout(function() {
-        $('#salinText').html('<strong><i class="bi bi-files"></i> Salin Nomor Rekening</strong>');
-      }, 2000);
-    }
-  </script>
-
   <!-- =======================================================
   * Template Name: MyResume - v4.7.0
   * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
@@ -748,8 +632,10 @@
 
   <div id="preloader"></div>
   <button type="button" id="btnPlay" class="btn-audio active d-flex align-items-center justify-content-center" style="border: none;"><i id="iconPlay" class="bi bi-pause-fill"></i></button>
+  <div id="mySong">
+    
+  </div>
   <audio id="song" loop>
-    <source src="" type="audio/mp3" id="audioSource">
   </audio>
 
   <!-- Vendor JS Files -->
@@ -766,6 +652,123 @@
   <script src="assets/vendor/slideshow/js/main.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&v=weekly"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!--- Script for the REST API -->
+<script>
+  const baseUrls = {
+    'local': 'http://localhost:8080/api',
+    'dev': 'https://digivitation-web-service.fly.dev/api'
+  };
+
+  const ENV = 'dev';
+  const url = baseUrls[ENV] + '/invitation/';
+  const referenceNumber = new URLSearchParams(window.location.search).get("ref")
+  console.log("referenceNumber: ", referenceNumber)
+  const response = fetch(
+    url + referenceNumber,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      }
+    }
+  ).then(res => res.json().then(json => {
+    if (json.status != 'SUCCESS') {
+      return null
+    }
+    return json.data
+  })).catch(error => {
+    return null;
+  });
+  
+  const greetingCardResponses = fetch(
+    baseUrls[ENV] + '/greeting-card',
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      }
+    }
+  ).then(res => res.json().then(json => {
+    if (json.status != 'SUCCESS') {
+      return null
+    }
+    return json.data
+  })).catch(error => {
+    return null;
+  });
+
+  window.onload = async () => {
+    const data = await response;
+    let coupleName = "Alvin & Arini";
+    let guestName = "Maaf Undangan tidak Tersedia Untuk Anda";
+    if (data != null) {
+      coupleName = data.couple_name;
+      guestName = data.guest_name;
+    } else {
+      $('#btnOpenInvitation').remove();
+    }
+    $(".coupleNameTitle").html(coupleName).attr("class", "mt-4");
+    $("#guestName").html(guestName);
+
+    if (data.is_parent_invitation == true) {
+      $(".descHero").html("Tanpa mengurangi rasa hormat,<br>Kami mengundang Bapak/Ibu/Saudara/i<br>Untuk hadir di acara pernikahan Putra dan Putri kami.");
+      $(".descPengantin").html("Dengan memohon rahmat dan ridha Allah SWT, perkenankan kami mengundang Bapak/Ibu/Saudara/i ke acara pernikahan Putra dan Putri kami:");
+      $(".descAcaraPernikahan").html("Dengan memohon Rahmat Allah Subhanahu wa Ta’ala dan dengan segenap kerendahan hati, perkenankanlah kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan Putra dan Putri kami yang akan dilaksanakan pada:");
+      $("#amplop").hide();
+      $(".descDoaUcapan").html("Suatu kebahagiaan bagi kami sekeluarga apabila berkenan hadir untuk memberikan doa restu kepada Putra dan Putri kami.");
+
+      $('#song').html(`<source src="./assets/audio/shania-twain.mp3" type="audio/mp3">`);
+      $('#songTitle').html('Song by Shania Twain - From This Moment On');
+    } else {
+      $(".descHero").html("Tanpa mengurangi rasa hormat,<br>Kami mengundang Bapak/Ibu/Saudara/i<br>Untuk hadir di acara pernikahan kami.");
+      $(".descPengantin").html("Dengan memohon rahmat dan ridha Allah SWT, perkenankan kami mengundang Bapak/Ibu/Saudara/i ke acara pernikahan kami:");
+      $(".descAcaraPernikahan").html("Dengan memohon Rahmat Allah Subhanahu wa Ta’ala dan dengan segenap kerendahan hati, perkenankanlah kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami yang akan dilaksanakan pada:");
+      $(".descDoaUcapan").html("Suatu kebahagiaan bagi kami sekeluarga apabila berkenan hadir untuk memberikan doa restu kepada kami.");
+      $('#song').html(`<source src="./assets/audio/sound.mp3" type="audio/mp3"">`);
+      $('#songTitle').html('Song by Arda & Tantri - Pelabuhan Terakhir');
+    }
+
+    const greetingCardData = await greetingCardResponses;
+
+    $('#countUcapan').html(greetingCardData.length + " Ucapan");
+    let i = 0;
+    greetingCardData.forEach((greetingCard) => {
+      const greetingCardElement = `
+        <div class="row ml-2">
+          <strong>${greetingCard.guest_name}</strong>
+          <p>${greetingCard.message}</p>
+        </div>
+      `;
+      $("#list-pesan").append(greetingCardElement);
+    });
+
+    $("#bankTransfer").hide();
+    $("#giftHadiah").hide();
+    $("#konfirmasi").hide();
+  };
+
+  $('#bukaMap').click(function () {
+    window.open(
+      'https://www.google.com/maps/place/Jl.+Jawa+No.10,+Cigobang,+Gunungsimping,+Kec.+Cilacap+Tengah,+Kabupaten+Cilacap,+Jawa+Tengah+53211/@-7.7058316,109.0246014,17z/data=!3m1!4b1!4m5!3m4!1s0x2e6512c62cc1fa8d:0xeb0f7cd578af9d93!8m2!3d-7.7058316!4d109.0246014',
+      '_blank'
+    )
+  });
+
+  function copyText() {
+    var copyText = document.getElementById("noRek");
+    copyText.hidden = false;
+    copyText.select();
+    document.execCommand("copy");
+    copyText.hidden = true;
+    $('#salinText').html('<strong>Nomor rekening berhasil disalin.</strong>');
+    setTimeout(function() {
+      $('#salinText').html('<strong><i class="bi bi-files"></i> Salin Nomor Rekening</strong>');
+    }, 2000);
+  }
+</script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
