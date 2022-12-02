@@ -64,6 +64,7 @@
             <h1 class="coupleNameTitle"></h1>
             <p class="Kepada mt-3">Kepada Bapak/Ibu/Saudara/i</p>
             <strong id="guestName"></strong>
+            <p id="guestCategory" style="font-size: 20px;"></p>
           </div>
           <div class="col-lg-12 mt-4">
             <button type="button" id="btnOpenInvitation" class="btn btn-default pulse"  data-mdb-animation="slide-out-right" data-bs-dismiss="modal"><i class="fa-solid fa-envelope fa-beat"></i> Buka Undangan</button>
@@ -704,14 +705,17 @@
     const data = await response;
     let coupleName = "Alvin & Arini";
     let guestName = "Maaf Undangan tidak Tersedia Untuk Anda";
+    let guestCategory = "";
     if (data != null) {
       coupleName = data.couple_name;
       guestName = data.guest_name;
+      guestCategory = data.category;
     } else {
       $('#btnOpenInvitation').remove();
     }
     $(".coupleNameTitle").html(coupleName).attr("class", "mt-4");
     $("#guestName").html(guestName);
+    $("#guestCategory").html(guestCategory);
 
     if (data.is_parent_invitation == true) {
       $(".descHero").html("Tanpa mengurangi rasa hormat,<br>Kami mengundang Bapak/Ibu/Saudara/i<br>Untuk hadir di acara pernikahan Putra dan Putri kami.");
